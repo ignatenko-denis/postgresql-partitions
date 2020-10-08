@@ -1,0 +1,22 @@
+app:
+  label: prod-env
+
+spring:
+  jpa:
+    show-sql: false
+    generate-ddl: false
+    database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+    properties:
+      hibernate:
+        default_schema: sample
+        dialect: org.hibernate.dialect.PostgreSQL10Dialect
+        show_sql: false
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://sample:5432/sample?prepareThreshold=0
+    username: sample
+    password: sample
+    platform: postgres
+    hikari:
+      schema: sample
